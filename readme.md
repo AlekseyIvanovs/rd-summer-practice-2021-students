@@ -1,11 +1,12 @@
 # RD summer practice 2021
 
 ## Работа
-Беляева Анна annabelyaeva1
-Зеленев Максим Zelenev
-Иванов Алексей AlekseyIvanovs
-Карпушкин Артем prthd21
-Козырева Наталья NataliyaKozyreva
+Работу выполнили: 
+Беляева Анна - annabelyaeva1,
+Зеленев Максим - Zelenev,
+Иванов Алексей - AlekseyIvanovs,
+Карпушкин Артем - prthd21,
+Козырева Наталья - NataliyaKozyreva.
 
 ## Сервера для работы
  - http://212.12.28.76:8085/ - основной
