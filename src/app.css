@@ -68,3 +68,24 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
 .coin {
     color: rgb(255, 215, 0);
 }
+.butt {
+    border-radius: 7px;
+    background-color: #aecedf;
+    border: 2px solid rgb(44, 102, 156);
+    cursor: pointer;
+}
+#xButton {
+    background-color: #ff0000;
+    border: 2px solid rgb(211, 24, 24);
+    border-radius: 7px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.butt:hover {
+    background-color: #3734ec;
+    color: white;
+}
+#xButton:hover {
+    background-color: #8d0d0d;
+    color: white;
+}
