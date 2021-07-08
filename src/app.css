@@ -1,0 +1,70 @@
+.hidden {
+    display: none;
+}
+body {
+    background: #80888a ;
+    font-family: cursive;
+    color: rgb(44, 102, 156);
+    min-width: 400px;
+}
+
+h3 { border-bottom: 5px solid rgb(44, 102, 156);        
+}
+.header {
+    background: #ffffff;
+    border: 5px solid rgb(44, 102, 156);
+    text-align: center;
+    width: 96%;  
+}
+.Team
+{
+    width: 20%;
+    height: 300px;
+    background: #ffffff;
+    border: 5px solid rgb(44, 102, 156);
+    display: inline-block;
+    vertical-align: top;
+}
+.mapplace
+{
+    width: 52%;
+    height: 304px;
+    background: #ffffff;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.bottbutt {
+    background: #ffffff;
+    border: 5px solid rgb(44, 102, 156);
+    text-align: center;
+    width: 96%; 
+    height: 50px;
+}
+.progress {
+    background-color: #EFEFEF;
+    height: 20px;
+    border-radius: 4px;
+    margin: 4px;  
+    margin-top: -20px;
+}
+.teamname {
+    margin-left: 4px;
+}
+.teamlife {
+    margin-left: 4px;
+}
+.teamscore {
+    margin-left: 4px;
+}
+#bad {
+    color: rgb(255, 0, 0); 
+}
+#good {
+    color: rgb(0, 26, 255); 
+}
+.lives {
+    color: rgb(228, 65, 155);
+}
+.coin {
+    color: rgb(255, 215, 0);
+}
