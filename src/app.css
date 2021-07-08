@@ -37,8 +37,9 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     background: #ffffff;
     border: 5px solid rgb(44, 102, 156);
     text-align: center;
+    color: rgb(44, 102, 156);
     width: 96%; 
-    height: 50px;
+    height: auto;
 }
 .progress {
     background-color: #EFEFEF;
@@ -60,7 +61,7 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     color: rgb(255, 0, 0); 
 }
 #good {
-    color: rgb(0, 26, 255); 
+    color: rgb(0, 26, 255);
 }
 .lives {
     color: rgb(228, 65, 155);
@@ -73,6 +74,7 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     background-color: #aecedf;
     border: 2px solid rgb(44, 102, 156);
     cursor: pointer;
+    margin-bottom: 4px;
 }
 #xButton {
     background-color: #ff0000;
