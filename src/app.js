@@ -758,24 +758,24 @@
                  *  можно использовать $('selector')
                  */
                 return {
-                    // $gameCaption: ,
-                    // $switchTimer: ,
+                     //$gameCaption: $('#gameCaption'),
+                    //$switchTimer: ,
                     // team1: {
                     //     $container: ,
                     //     $caption: ,
                     //     $players: ,
-                    //     $lives: ,
-                    //     $coins:
+                    $lives: $('#lives'),
+                    $coins: $('#coin'),
                     // },
                     // team2: {
                     //     $container: ,
                     //     $caption: ,
                     //     $players: ,
-                    //     $lives: ,
-                    //     $coins:
+                   // $lives: $('#lives'),
+                    //$coins: $('#coin'),
                     // },
                     // mapBuffer: null,
-                    // $mapCanvas: ,
+                    // $mapCanvas: $('#gameCanvas'),
                     // mapCellSize: 25
                 };
             }
