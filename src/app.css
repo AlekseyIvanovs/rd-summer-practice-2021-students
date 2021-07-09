@@ -16,7 +16,7 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     text-align: center;
     width: 96%;  
 }
-.Team
+#teamL
 {
     width: 20%;
     height: 300px;
@@ -24,6 +24,20 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     border: 5px solid rgb(44, 102, 156);
     display: inline-block;
     vertical-align: top;
+    padding-left: 4px;
+    
+}
+#teamR
+{
+    width: 20%;
+    height: 300px;
+    background: #ffffff;
+    border: 5px solid rgb(44, 102, 156);
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 4px;
+    
+    
 }
 .mapplace
 {
@@ -37,25 +51,15 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     background: #ffffff;
     border: 5px solid rgb(44, 102, 156);
     text-align: center;
-    color: rgb(44, 102, 156);
     width: 96%; 
     height: auto;
 }
-.progress {
+#progress {
     background-color: #EFEFEF;
     height: 20px;
     border-radius: 4px;
     margin: 4px;  
     margin-top: -20px;
-}
-.teamname {
-    margin-left: 4px;
-}
-.teamlife {
-    margin-left: 4px;
-}
-.teamscore {
-    margin-left: 4px;
 }
 #bad {
     color: rgb(255, 0, 0); 
@@ -63,10 +67,16 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
 #good {
     color: rgb(0, 26, 255);
 }
-.lives {
+#livesL {
     color: rgb(228, 65, 155);
 }
-.coin {
+#coinsL {
+    color: rgb(255, 215, 0);
+}
+#livesR {
+    color: rgb(228, 65, 155);
+}
+#coinsR {
     color: rgb(255, 215, 0);
 }
 .butt {
@@ -74,6 +84,7 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     background-color: #aecedf;
     border: 2px solid rgb(44, 102, 156);
     cursor: pointer;
+    color: rgb(15, 85, 150);
     margin-bottom: 4px;
 }
 #xButton {
