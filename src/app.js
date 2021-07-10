@@ -762,15 +762,15 @@
                     $switchTimer: $('#switchTimer'),
                     team1: {
                     $container: $('#teamR'),
-                    //     $caption: ,
-                    $players: $('#bad'),
+                    $caption: $('#nameR') ,
+                    //$players: ,
                     $lives: $('#livesR'),
                     $coins: $('#coinsR'),
                     },
                     team2: {
                     $container: $('#teamL'),
-                    //     $caption: ,
-                    $players: $('#nameL'),
+                    $caption: $('#nameL'),
+                    //$players: ,
                     $lives: $('#livesL'),
                     $coins: $('#coinsL'),
                     },
@@ -861,8 +861,10 @@
                  *              повешайте обработчики событий на кнопки
                  *              нажатия на кнопки это событие click
                  */
-                // var c = this.state.callbacks;
-                // c.captionChanged
+                 var c = this.state.callbacks;
+                 c.captionChanged.add(function (name, status){
+                     this.setGameCaption(name, status);
+                 }.bind(this));
                 // c.invalidGame
                 // c.mapChanged
                 // c.playerChanged
@@ -877,10 +879,14 @@
             };
             GameView.prototype.bindButtons = function () {
                 // TODO Task 3.1 повешайте обработчики событий
-                // var btns = this.btns;
-                // var $lastKey = -1;
-                // btns.$btnGameList.
-                // btns.$btnStart.
+                var btns = this.btns;
+                var $lastKey = -1;
+                btns.$btnGameList.click(function () {
+                    window.location.replace("index.html");
+                });
+                btns.$btnStart.click(function () {
+                    this.state.game.start();
+                }.bind(this));
                 // btns.$btnConnect.
                 // btns.$btnConnectPolice.
                 // btns.$btnConnectThief.

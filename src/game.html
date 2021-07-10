@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="app.css" />
     <!--  TODO: Раскомментировать при начале работы с сервером -->
-<script src="modernizr.js"></script>
-<script src="/js/jquery.js"></script>
-<script src="/js/jquery.signalR.js"></script>
-<script src="/js/gameApi.js"></script>
+    <script src="modernizr.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.signalR.js"></script>
+    <script src="/js/gameApi.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Игра - Полицейские и Мошенники</title>
 </head>
+
 <body>
 <!-- TODO: Task 0. Построить вёрстку приложения по макету используя для сетки bootstrap -->
 <div class="header">
     <h3>Полицейские и мошенники</h3>
-    <div id="progress"> 
-        
+    <div id="progress">        
         <h6>Смена ролей через...</h6>    
     </div>  
     <div class="container-fluid timer">
@@ -23,21 +24,21 @@
     </div>
 </div>
 
-<div id="teamR">
-    <div>Команда R. <span id="bad">404</span></div> 
-    <div>Жизни:<span id="livesR">♥</span> </div> 
-    <div>Очки:<span id="coinsR">000</span> </div> 
-</div>
-<div class="mapplace">
-   <!-- <h6 id="gameCaption" style="color: black; display: inline-block;">Название игры </h6>-->
-   <canvas id="gameCanvas"></canvas>
-</div>
-
 <div id="teamL">
     <div >Команда L. <span id="nameL">404</span></div> 
     <div >Жизни:<span id="livesL">♥</span> </div> 
     <div >Очки:<span id="coinsL">000</span> </div> 
 </div>
+<div class="mapplace">
+   <!-- <h6 id="gameCaption" style="color: black; display: inline-block;">Название игры </h6>-->
+   <canvas id="gameCanvas"></canvas>
+</div>
+<div id="teamR">
+    <div>Команда R. <span id="nameR">404</span></div> 
+    <div>Жизни:<span id="livesR">♥</span> </div> 
+    <div>Очки:<span id="coinsR">000</span> </div> 
+</div>
+
 <div class="bottbutt">
     <button class="butt" id="listBtn">К списку игр</button>
     <button class="butt" id="startBtn">Начать игру</button>
