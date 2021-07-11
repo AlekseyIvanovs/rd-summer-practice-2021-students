@@ -758,7 +758,7 @@
                  *  можно использовать $('selector')
                  */
                 return {
-                    //$gameCaption: $('#gameCaption'),
+                    $gameCaption: $('#gameCaption'),
                     $switchTimer: $('#switchTimer'),
                     team1: {
                     $container: $('#teamR'),
@@ -1040,6 +1040,7 @@
                 status = status || this.state.status;
                 /**
                  * TODO: Task 5. Поменяйте под вашу вёрстку
+                 * неSOLVED: Изменил нашу верстку под TASK.
                  */
                 this.game.$gameCaption
                     .empty()
@@ -1069,6 +1070,7 @@
                     player.connected ? "dc" : "dd";
                 /**
                  * TODO: Task 6. Поменяйте под вашу вёрстку
+                 * What is this??? (Сунул под нашу верстку)
                  */
                 return $(app.utils.t(
                     "<div id='player{playerId}' class='game-player game-player-status-{status}'>" +
@@ -1105,6 +1107,7 @@
                 $team.$container.addClass(role);
                 /**
                  * TODO: Task 7. Поменяйте под вашу вёрстку
+                 *  (Сунул под нашу верстку)
                  */
                 $team.$caption
                     .empty()

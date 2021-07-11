@@ -102,3 +102,12 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     background-color: #8d0d0d;
     color: white;
 }
+#gameCaption {
+    width: 100%;
+    align-self: flex-end;
+    color: #3dfa1b;
+    margin: 0px 10px 0px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000;
+    height: auto;
+}

@@ -49,6 +49,22 @@
     <button class="butt" id="pauseBtn">Пауза</button>
     <button id="xButton">Прервать игру</button>
 </div>
+<div id="gameCaption">
+    <div class='game-caption-name'>{name} 
+        <span class='game-caption-status game-caption-status-{status}'>{statusName}</span>
+    </div> 
+    <div id='player{playerId}' class='game-player game-player-status-{status}'>" +
+        "<span class='game-player-name'>{name}</span>" +
+        " [<span class='game-player-coins'>{coins}</span>;" +
+        "<span class='game-player-lives'>{lives}</span>;" +
+        "<span class='game-player-deaths'>{deaths}</span>]" +
+    "</div>
+    "<div class='game-team-{role}-caption'>" +
+        "<span class='game-team-name'>{name}</span> " +
+        "<span class='game-team-role game-team-role-{role}'>{roleName}</span>" +
+    "</div> 
+</div>
+
 <div class="hidden">
     <img id="img_heart"
          src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJzdmdfaGVhcnQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9
