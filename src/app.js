@@ -763,14 +763,14 @@
                     team1: {
                     $container: $('#teamR'),
                     $caption: $('#nameR') ,
-                    //$players: ,
+                    //$players: $('#playersR')  ,
                     $lives: $('#livesR'),
                     $coins: $('#coinsR'),
                     },
                     team2: {
                     $container: $('#teamL'),
                     $caption: $('#nameL'),
-                    //$players: ,
+                    //$players: $('#playersL'),
                     $lives: $('#livesL'),
                     $coins: $('#coinsL'),
                     },
@@ -870,16 +870,28 @@
                      this.setGameCaption(name, status);
                  }.bind(this));
                 // c.invalidGame
-                // c.mapChanged
-                // c.playerChanged
+                c.mapChanged.add(function (map){
+                    this.updateMap(map);
+                }.bind(this));
+                c.playerChanged.add(function (player){
+                    this.updatePlayer(player);
+                }.bind(this));
                 // c.statusChanged
                 // c.synced
                 // c.syncing
-                // c.teamCaptionChanged
-                // c.teamCoinsChanged
-                // c.teamLivesChanged
+                c.teamCaptionChanged.add(function (team){
+                    this.updateTeamCaption(team);
+                }.bind(this));
+                c.teamCoinsChanged.add(function (team){
+                    this.updateTeamCoins(team);
+                }.bind(this));
+                c.teamLivesChanged.add(function (team){
+                    this.updateTeamLives(team);
+                }.bind(this));
                 // c.teamPlayersChanged
-                // c.timerChanged
+                c.timerChanged.add(function (data){
+                    this.setTimer(data);
+                }.bind(this));
             };
             GameView.prototype.bindButtons = function () {
                 // TODO Task 3.1 повешайте обработчики событий
@@ -891,12 +903,24 @@
                 btns.$btnStart.click(function () {
                     this.state.game.start();
                 }.bind(this));
-                // btns.$btnConnect.
-                // btns.$btnConnectPolice.
-                // btns.$btnConnectThief.
-                // btns.$btnLeave.
-                // btns.$btnPause.
-                // btns.$btnCancel.
+                btns.$btnConnect.click(function () {
+                    this.state.game.join(GameApi.GameTeamRole.random);
+                }.bind(this));            
+                btns.$btnConnectPolice.click(function () {
+                    this.state.game.join(GameApi.GameTeamRole.police);
+                }.bind(this));
+                btns.$btnConnectThief.click(function () {
+                    this.state.game.join(GameApi.GameTeamRole.thief);
+                }.bind(this));
+                btns.$btnLeave.click(function () {
+                    this.state.game.leave();
+                }.bind(this));
+                btns.$btnPause.click(function () {
+                    this.state.game.pause();
+                }.bind(this));
+                btns.$btnCancel.click(function () {
+                    this.state.game.cancel();
+                }.bind(this));
                 $(window).on('keydown', function(event) {
                     if ($lastKey === event.keyCode) {
                         return;
