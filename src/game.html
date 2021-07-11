@@ -28,14 +28,36 @@
     <div >Команда L. <span id="nameL">404</span></div> 
     <div >Жизни:<span id="livesL">♥</span> </div> 
     <div >Очки:<span id="coinsL">000</span> </div> 
+    <div id="team1users">
+        <div id='player{playerId}' class='game-player game-player-status-{status}'>
+            <span class='game-player-name'>{name}</span>
+            <span class='game-player-coins'>{coins}</span>
+            <span class='game-player-lives'>{lives}</span>
+            <span class='game-player-deaths'>{deaths}</span>
+        </div>
+    </div>
 </div>
+
 <div class="mapplace">
-   <canvas id="gameCanvas"></canvas>
+    <div id="gameCaption">
+        <div class='game-caption-name'>{name} 
+            <span class='game-caption-status game-caption-status-{status}'>{statusName}</span>
+        </div> 
+    </div>
+    <canvas id="gameCanvas"></canvas>
 </div>
 <div id="teamR">
     <div>Команда R. <span id="nameR">404</span></div> 
     <div>Жизни:<span id="livesR">♥</span> </div> 
     <div>Очки:<span id="coinsR">000</span> </div> 
+    <div id="team2users">
+        <div id='player{playerId}' class='game-player game-player-status-{status}'>
+            <span class='game-player-name'>{name}</span>
+            <span class='game-player-coins'>{coins}</span>
+            <span class='game-player-lives'>{lives}</span>
+            <span class='game-player-deaths'>{deaths}</span>
+        </div>
+    </div>
 </div>
 
 <div class="bottbutt">
@@ -48,20 +70,14 @@
     <button class="butt" id="pauseBtn">Пауза</button>
     <button id="xButton">Прервать игру</button>
 </div>
-<div id="gameCaption">
-    <div class='game-caption-name'>{name} 
-        <span class='game-caption-status game-caption-status-{status}'>{statusName}</span>
-    </div> 
-    <div id='player{playerId}' class='game-player game-player-status-{status}'>" +
-        "<span class='game-player-name'>{name}</span>" +
-        " [<span class='game-player-coins'>{coins}</span>;" +
-        "<span class='game-player-lives'>{lives}</span>;" +
-        "<span class='game-player-deaths'>{deaths}</span>]" +
-    "</div>
-    "<div class='game-team-{role}-caption'>" +
-        "<span class='game-team-name'>{name}</span> " +
-        "<span class='game-team-role game-team-role-{role}'>{roleName}</span>" +
-    "</div> 
+
+
+
+<div id="task7">
+    <div class='game-team-{role}-caption'>
+        <span class='game-team-name'>{name}</span> 
+        <span class='game-team-role game-team-role-{role}'>{roleName}</span>
+    </div>
 </div>
 
 <div class="hidden">

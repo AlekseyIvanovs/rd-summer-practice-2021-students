@@ -41,7 +41,7 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
 }
 .mapplace
 {
-    height: 360px;
+    height: auto;
     background: #ffffff;
     box-sizing: border-box;
     width: calc(60% - 48px);
@@ -62,10 +62,10 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     margin-top: -20px;
 }
 #nameR {
-    color: rgb(0, 26, 255); 
+    color:red ; 
 }
 #nameL {
-    color: rgb(255, 0, 0);
+    color: rgb(0, 26, 255);
 }
 #livesL {
     color: rgb(228, 65, 155);
@@ -103,6 +103,23 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     color: white;
 }
 #gameCaption {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    /* width: 100%;
+    align-self: flex-end;
+    color: #3dfa1b;
+    margin: 0px 10px 0px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000;
+    height: auto;*/
+}
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+}
+
+#task7 {
     width: 100%;
     align-self: flex-end;
     color: #3dfa1b;
@@ -111,7 +128,17 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     background-color: #000;
     height: auto;
 }
-#gameCanvas {
-    display: block;
-    margin: 20px auto;
+#gameList {
+    background: #ffffff;
+    border: 5px solid rgb(44, 102, 156);
+    text-align: center;
+    width: 100%; 
+    margin: 0px 10px 0px 10px; 
 }
+#new-game {
+    background: #ffffff;
+    border: 5px solid rgb(44, 102, 156);
+    text-align: center;
+    width: 100%; 
+    margin: 0px 10px 0px 10px; 
+}  
