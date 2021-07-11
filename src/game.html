@@ -4,14 +4,82 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="app.css" />
     <!--  TODO: Раскомментировать при начале работы с сервером -->
-<!--    <script src="modernizr.js"></script>-->
-<!--    <script src="/js/jquery.js"></script>-->
-<!--    <script src="/js/jquery.signalR.js"></script>-->
-<!--    <script src="/js/gameApi.js"></script>-->
+    <script src="modernizr.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.signalR.js"></script>
+    <script src="/js/gameApi.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Игра - Полицейские и Мошенники</title>
 </head>
+
 <body>
 <!-- TODO: Task 0. Построить вёрстку приложения по макету используя для сетки bootstrap -->
+<div class="header">
+    <h3>Полицейские и мошенники</h3>
+    <div id="progress">        
+        <h6>Смена ролей через...</h6>    
+    </div>  
+    <div class="container-fluid timer">
+        <span id="switchTimer">00:00</span>
+    </div>
+</div>
+
+<div id="teamL">
+    <div >Команда L. <span id="nameL">404</span></div> 
+    <div >Жизни:<span id="livesL">♥</span> </div> 
+    <div >Очки:<span id="coinsL">000</span> </div> 
+    <div id="team1users">
+        <div id='player{playerId}' class='game-player game-player-status-{status}'>
+            <span class='game-player-name'>{name}</span>
+            <span class='game-player-coins'>{coins}</span>
+            <span class='game-player-lives'>{lives}</span>
+            <span class='game-player-deaths'>{deaths}</span>
+        </div>
+    </div>
+</div>
+
+<div class="mapplace">
+    <div id="gameCaption">
+        <div class='game-caption-name'>{name} 
+            <span class='game-caption-status game-caption-status-{status}'>{statusName}</span>
+        </div> 
+    </div>
+    <canvas id="gameCanvas"></canvas>
+</div>
+<div id="teamR">
+    <div>Команда R. <span id="nameR">404</span></div> 
+    <div>Жизни:<span id="livesR">♥</span> </div> 
+    <div>Очки:<span id="coinsR">000</span> </div> 
+    <div id="team2users">
+        <div id='player{playerId}' class='game-player game-player-status-{status}'>
+            <span class='game-player-name'>{name}</span>
+            <span class='game-player-coins'>{coins}</span>
+            <span class='game-player-lives'>{lives}</span>
+            <span class='game-player-deaths'>{deaths}</span>
+        </div>
+    </div>
+</div>
+
+<div class="bottbutt">
+    <button class="butt" id="listBtn">К списку игр</button>
+    <button class="butt" id="startBtn">Начать игру</button>
+    <button class="butt" id="randBtn">Подключиться к игре(случайно)</button>
+    <button class="butt" id="copConnectBtn">Подключиться к полиции</button>
+    <button class="butt" id="rougeConnectBtn">Подключиться к мошенникам</button>
+    <button class="butt" id="leaveBtn">Покинуть игру</button>
+    <button class="butt" id="pauseBtn">Пауза</button>
+    <button id="xButton">Прервать игру</button>
+</div>
+
+
+
+<div id="task7">
+    <div class='game-team-{role}-caption'>
+        <span class='game-team-name'>{name}</span> 
+        <span class='game-team-role game-team-role-{role}'>{roleName}</span>
+    </div>
+</div>
+
 <div class="hidden">
     <img id="img_heart"
          src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJzdmdfaGVhcnQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9
@@ -87,19 +155,26 @@ B5Mj0iMjEiIC8+CjxsaW5lIHgxPSIyMiIgeTE9IjE3IiB4Mj0iMTgiIHkyPSIyMSIgLz4KPC9nP
 go8L3N2Zz4="/>
 </div>
 <!--  TODO: Раскомментировать при начале работы с сервером -->
-<!--<script src="app.js"></script>-->
-<!--<script>-->
-<!--    (function() {-->
-<!--        var gameApi = new GameApi();-->
-<!--        gameApi.questor.on("unauthorized", function () {-->
-<!--            window.location.replace("../login");-->
-<!--        });-->
-<!--        gameApi.questor.login();-->
-<!--        var gameState = new app.game.GameState(gameApi);-->
-<!--        new app.game.GameView($("#game"), $("#loading"), $("#loadError"), gameState);-->
-<!--        gameState.request();-->
-<!--    })();-->
+<script src="app.js"></script>
+<script>
+ (function() {
+       var gameApi = new GameApi();
+        gameApi.questor.on("unauthorized", function () {
+            window.location.replace("../login");
+       });
+        gameApi.questor.login();
+        var gameState = new app.game.GameState(gameApi);
+       new app.game.GameView($("#game"), $("#loading"), $("#loadError"), gameState);
+        gameState.request();
+    })();
 
-<!--</script>-->
+</script>
+<!-- <script src="../js/jsHelper.js" type="text/javascript"></script>
+<script src="../js/wrapper.js" type="text/javascript"></script>
+<script src="game.js" type="text/javascript"></script>
+
+<script src="js/jquery-3.1.1.min.js"> $(window).on('keydown', function(event) {
+console.log(event)})</script> --> <!--пока хз-->
+
 </body>
 </html>
