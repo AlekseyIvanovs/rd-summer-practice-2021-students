@@ -1162,6 +1162,87 @@
                  *    this.state.getPlayer(currentUserId) - пользователь в игре?
                  *    this.btns - кнопки тут
                  */
+                var user = this.state.gameApi.questor.user.id;
+                var owner = user === this.state.owner.id;
+                var admin = this.state.gameApi.questor.user.isAdmin;
+                var status = this.state.status;
+                var btns = this.btns;
+                var connected = this.state.getPlayer(user);
+                
+                btns.$btnGameList.removeClass("hidden");
+                
+                if (this.state.status === GameApi.GameStatus.open ||
+                    this.state.status === GameApi.GameStatus.ready) {
+                    btns.$btnPause.addClass("hidden");
+                    if (owner || admin) {
+                        btns.$btnStart.removeClass("hidden");
+                        btns.$btnCancel.removeClass("hidden");
+                    }
+                    else {
+                        btns.$btnStart.addClass("hidden");
+                        btns.$btnCancel.addClass("hidden");
+                    }
+                    if (connected === true) {
+                        btns.$btnConnect.addClass("hidden");
+                        btns.$btnConnectPolice.addClass("hidden");
+                        btns.$btnConnectThief.addClass("hidden");
+                        btns.$btnLeave.removeClass("hidden");
+                    }
+                    else {
+                        btns.$btnConnect.removeClass("hidden");
+                        btns.$btnConnectPolice.removeClass("hidden");
+                        btns.$btnConnectThief.removeClass("hidden");
+                        btns.$btnLeave.addClass("hidden");
+                    }
+                    return;
+                }
+                if (this.state.status === GameApi.GameStatus.starting || 
+                    this.state.status ===GameApi.GameStatus.inProcess) {
+                        btns.$btnStart.addClass("hidden");
+                        btns.$btnConnect.addClass("hidden");
+                        btns.$btnConnectPolice.addClass("hidden");
+                        btns.$btnConnectThief.addClass("hidden");  
+                        btns.$btnLeave.addClass("hidden");
+                    if (owner || admin) {
+                        btns.$btnPause.removeClass("hidden");
+                        btns.$btnCancel.removeClass("hidden");
+                    }
+                    else {
+                        btns.$btnPause.addClass("hidden");
+                        btns.$btnCancel.addClass("hidden");
+                    }
+                    return;
+                }
+                if (this.state.status === GameApi.GameStatus.paused) {
+                    if (owner || admin) {
+                        btns.$btnPause.addClass("hidden");
+                        btns.$btnStart.removeClass("hidden"); 
+                        btns.$btnCancel.removeClass("hidden");
+                    }
+                    else {
+                        btns.$btnPause.addClass("hidden");
+                        btns.$btnStart.addClass("hidden"); 
+                        btns.$btnPause.addClass("hidden");
+                    } 
+                        btns.$btnConnect.addClass("hidden");
+                        btns.$btnConnectPolice.addClass("hidden");
+                        btns.$btnConnectThief.addClass("hidden");  
+                        btns.$btnLeave.addClass("hidden");
+                    return;
+                    }
+                else {
+                    if (owner || admin) {
+                        btns.$btnCancel.removeClass("hidden");
+                    }
+                        btns.$btnStart.removeClass("hidden"); 
+                        btns.$btnConnect.addClass("hidden");
+                        btns.$btnConnectThief.addClass("hidden");
+                        btns.$btnConnectPolice.addClass("hidden");
+                        btns.$btnLeave.removeClass("hidden");
+                        btns.$btnPause.addClass("hidden");
+                }
+            
+                    
             };
             GameView.prototype.showLoading = function () {
                 /**
