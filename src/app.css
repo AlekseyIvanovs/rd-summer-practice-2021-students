@@ -5,7 +5,7 @@ body {
     background: #80888a ;
     font-family: cursive;
     color: rgb(44, 102, 156);
-    min-width: 400px;
+    min-width: 450px;
     display:flex;
     flex-wrap: wrap;
 }
@@ -62,10 +62,10 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     margin-top: -20px;
 }
 #nameR {
-    color: rgb(255, 0, 0); 
+    color: rgb(0, 26, 255); 
 }
 #nameL {
-    color: rgb(0, 26, 255);
+    color: rgb(255, 0, 0);
 }
 #livesL {
     color: rgb(228, 65, 155);
@@ -110,4 +110,8 @@ h3 { border-bottom: 5px solid rgb(44, 102, 156);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000;
     height: auto;
+}
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
 }

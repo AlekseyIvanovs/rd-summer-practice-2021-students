@@ -798,9 +798,9 @@
                     imgHeart: $('#img_heart').get(0),
                     imgCoin: $('#img_coin').get(0),
                     imgPolice: $('#img_police').get(0),
-                    imgPoliceSelf: $('#img_self').get(0),
+                    imgPoliceSelf: $('#img_police_self').get(0),
                     imgThief: $('#img_thief').get(0),
-                    imgThiefSelf: $('#img_self').get(0),
+                    imgThiefSelf: $('#img_thief_self').get(0),
                     imgSwitch: $('#img_switch').get(0),
                 };
             }
@@ -808,11 +808,12 @@
                 /**
                  * TODO Task 2. Опишите функцию которая задаст размеры игрового поля
                  */
-                 $canvas.style.width  = `${width}px`;
-                 $canvas.style.height = `${height}px`;
-                 $canvas.width = `${width}`;
-                 $canvas.height = `${height}`;
-                return $canvas;
+                return $canvas
+
+                .css("width", width + "px")
+                .css("height", height + "px")
+                .attr("width", width + "px")
+                .attr("height", height + "px");
             }
             function drawMapField(canvas, map, width, height, cellSize) {
                 var ctx = canvas.getContext("2d");
