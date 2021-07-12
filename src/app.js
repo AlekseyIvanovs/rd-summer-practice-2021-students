@@ -1222,6 +1222,9 @@
                         btns.$btnPause.addClass("hidden");
                         btns.$btnCancel.addClass("hidden");
                     }
+                    if (status === GameApi.GameStatus.starting) {
+                        alert('Игра начинается!');
+                    }
                     return;
                 }
                 if (status === GameApi.GameStatus.paused) {
@@ -1239,6 +1242,7 @@
                         btns.$btnConnectPolice.addClass("hidden");
                         btns.$btnConnectThief.addClass("hidden");  
                         btns.$btnLeave.addClass("hidden");
+                        alert('Игра приостановлена!');
                     return;
                 }
                 
@@ -1246,12 +1250,16 @@
                     if (owner || admin) {
                         btns.$btnCancel.removeClass("hidden");
                     }
-                        btns.$btnStart.removeClass("hidden"); 
+                        btns.$btnStart.addClass("hidden"); 
                         btns.$btnConnect.addClass("hidden");
                         btns.$btnConnectThief.addClass("hidden");
                         btns.$btnConnectPolice.addClass("hidden");
-                        btns.$btnLeave.removeClass("hidden");
+                        btns.$btnLeave.addClass("hidden");
                         btns.$btnPause.addClass("hidden");
+                        if (status === GameApi.GameStatus.canceled || 
+                            status ===GameApi.GameStatus.finished) {
+                        alert('Игра завершена!');
+                            }
                 }
                
                     
