@@ -1111,6 +1111,7 @@
             };
             GameView.prototype.setTeamCaption = function (team, $team) {
                 if (team.winner) {
+                    $team.$container.removeClass("game-team-back");
                     $team.$container.addClass("game-team-winner");
                 }
                 var role = team.role === GameApi.GameTeamRole.police ? "police" : "thief";
